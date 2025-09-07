@@ -1,63 +1,103 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# YouTube RAG Frontend
 
-## Available Scripts
+[Live Demo](https://priyanshu8346.github.io/Youtube-rag-frontend/)
 
-In the project directory, you can run:
+This is the frontend for the YouTube RAG (Retrieval-Augmented Generation) project. It allows users to paste a YouTube video URL, loads the transcript, and then ask questions about the video using an AI-powered chatbot.
 
-### `npm start`
+## Features
+- Paste any YouTube video URL and load its transcript (if available)
+- Ask questions about the video content and get instant answers
+- Beautiful, modern, and responsive UI built with Material UI
+- Glassmorphism card effect and animated chat bubbles
+- Mobile-friendly and desktop-ready
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How It Works
+1. Paste a YouTube video URL and click "Load".
+2. The app fetches the transcript using the backend.
+3. Ask any question about the video in the chat box.
+4. The AI will answer based on the transcript and context.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Demo Section
 
-### `npm test`
+### 📺 Demo Video
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[![Watch the demo](https://img.youtube.com/vi/job3d_XavR8/hqdefault.jpg)](https://youtu.be/job3d_XavR8)
 
-### `npm run build`
+<p align="center">
+	<img src="public/images/Screenshot%202025-09-07%20at%201.27.04%E2%80%AFPM.png" alt="Screenshot 1" width="350"/>
+	<img src="public/images/Screenshot%202025-09-07%20at%201.27.22%E2%80%AFPM.png" alt="Screenshot 2" width="350"/>
+	<img src="public/images/Screenshot%202025-09-07%20at%201.28.18%E2%80%AFPM.png" alt="Screenshot 3" width="350"/>
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Backend
+The backend is a Flask app that handles transcript retrieval and AI-powered question answering. You can find the backend code and setup instructions here:
 
-### `npm run eject`
+[YouTube RAG Backend (GitHub)](https://github.com/priyanshu8346/Youtube-rag-backend)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started (Local Development)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone this repository:
+	```sh
+	git clone https://github.com/priyanshu8346/Youtube-rag-frontend.git
+	cd Youtube-rag-frontend
+	```
+2. Install dependencies:
+	```sh
+	npm install
+	```
+3. Start the development server:
+	```sh
+	npm start
+	```
+4. Make sure your backend is running and accessible.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Deployment
+This app is deployed on GitHub Pages. To deploy your own version:
+1. Set the `homepage` field in `package.json` to your GitHub Pages URL.
+2. Run:
+	```sh
+	npm run deploy
+	```
 
-## Learn More
+## Tech Stack
+- React
+- Material UI
+- Axios
+- Flask (backend)
+- OpenAI (for LLM)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
+[MIT](LICENSE)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Support for more languages and auto-detection of transcript language
+- Summarization of entire video content in one click
+- Downloadable chat history or transcript
+- User authentication and personal history
+- Deploy backend to cloud (e.g., Render, Heroku, AWS, etc.)
+- Add support for audio and podcast URLs
+- Improved error handling and user feedback
+- Real-time streaming answers (typewriter effect)
+- Integration with other LLM providers (e.g., Gemini, Cohere)
+- Chrome extension version
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Frontend:** [Live Demo](https://priyanshu8346.github.io/Youtube-rag-frontend/)
 
-### Advanced Configuration
+**Backend:** [GitHub Repo](https://github.com/priyanshu8346/Youtube-rag-backend)
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
