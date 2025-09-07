@@ -21,7 +21,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import { useTheme, styled } from '@mui/material/styles';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://127.0.0.1:8000/";
+const BACKEND_URL =  "http://127.0.0.1:8000/";
 
 // Styled components
 const ChatContainer = styled(Box)(({ theme }) => ({
