@@ -14,13 +14,14 @@ import {
   alpha,
   AppBar,
   Toolbar,
-  Container,
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
 import PersonIcon from "@mui/icons-material/Person";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import { useTheme, styled } from '@mui/material/styles';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://127.0.0.1:8000/";
 
 // Styled components
 const ChatContainer = styled(Box)(({ theme }) => ({
@@ -51,7 +52,7 @@ const MessageContainer = styled(Box)(({ theme }) => ({
   padding: theme.spacing(2),
   display: 'flex',
   flexDirection: 'column',
-  gap: theme.spacing(2),
+  gap:theme.spacing(2),
   background: theme.palette.mode === 'dark'
     ? alpha(theme.palette.grey[900], 0.5) // Dark mode background
     : alpha(theme.palette.background.default, 0.7), // Light mode background
@@ -155,7 +156,7 @@ const Chat = () => {
     addBotMessage("⏳ Loading video transcript... Please wait.");
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/load_video", { video_id: id });
+      const res = await axios.post(`${BACKEND_URL}/load_video`, { video_id: id });
       console.log(res.data);
       addBotMessage(`✅ Transcript loaded! You can now ask questions about this video.`);
     } catch (err) {
@@ -178,7 +179,7 @@ const Chat = () => {
 
     try {
       setTimeout(async () => {
-        const response = await axios.post("http://127.0.0.1:8000/chat", { query: userMessage.text });
+        const response = await axios.post(`${BACKEND_URL}/chat`, { query: userMessage.text });
         addBotMessage(response.data.answer || "⚠️ No response from server");
         setBotTyping(false);
         setLoading(false);

@@ -19,7 +19,6 @@ import {
   VideoLibrary as VideoLibraryIcon,
   QuestionAnswer as QuestionAnswerIcon,
   ArrowForward as ArrowForwardIcon,
-  PlayArrow as PlayArrowIcon,
   Chat as ChatIcon,
   AutoAwesome as AutoAwesomeIcon,
   Speed as SpeedIcon,
